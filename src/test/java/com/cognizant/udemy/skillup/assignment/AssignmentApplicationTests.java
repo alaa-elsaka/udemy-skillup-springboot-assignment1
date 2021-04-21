@@ -15,8 +15,9 @@ class AssignmentApplicationTests {
 
 	@Test
 	void testAdding2Numbers() {
+		int expected = 2 + 3;
 		int actual = adderService.add(2,3);
-		assertEquals(actual,5);
+		assertEquals(actual,expected);
 	}
 
 }
