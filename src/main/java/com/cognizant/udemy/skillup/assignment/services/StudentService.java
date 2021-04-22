@@ -4,6 +4,8 @@ import com.cognizant.udemy.skillup.assignment.entities.Student;
 import com.cognizant.udemy.skillup.assignment.repositories.StudentRespository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class StudentService implements IStudentService{
 
@@ -25,5 +27,10 @@ public class StudentService implements IStudentService{
     @Override
     public Student getStudentById(long id) {
         return studentRespository.findById(id).get();
+    }
+
+    @Override
+    public List<Student> getAllStudents() {
+        return studentRespository.findAll();
     }
 }
